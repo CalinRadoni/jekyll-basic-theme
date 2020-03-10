@@ -15,12 +15,16 @@ skin: light
 # Build settings
 markdown: kramdown
 
-# Exclusions
+# Exclusions ...
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
+
+# ... and inclusions
+include:
+  - _pages
 
 # Change default permalink format
 permalink: /pages/:short_year:month:day-:slug:output_ext

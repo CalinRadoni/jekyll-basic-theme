@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r!^(assets|_(includes|layouts|posts|sass)/|(LICENSE|README|index|about|404)((\.(txt|md|html)|$)))!i)
+    f.match(%r!^(assets|_(includes|layouts|pages|posts|sass)/|(LICENSE|README|index)((\.(txt|md|html)|$)))!i)
   end
 
   spec.add_runtime_dependency "github-pages"
