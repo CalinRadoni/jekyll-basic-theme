@@ -6,6 +6,7 @@ layout: default
 
 {{ content }}
 
+<h2>Posts</h2>
 <ul>
   {%- assign item_list = site.posts | sort | reverse -%}
   {%- for post in item_list limit:10 -%}

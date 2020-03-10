@@ -6,4 +6,9 @@ layout: home
 
 ## {{ site.description }}
 
-Links: [About]({% link _pages/about.md %}) [README]({% link README.md %})
+Links:
+
+* [Categories]({% link _pages/categories.md %})
+* [Tags]({% link _pages/tags.md %})
+* [About]({% link _pages/about.md %})
+* [README]({% link README.md %})
