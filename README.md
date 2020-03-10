@@ -1,8 +1,18 @@
+---
+---
+
 # jekyll-basic-theme
 
 This is a skeleton theme. It is meant to be used as a basis for other themes.
 
 ## Development and testing
+
+Download and install locally the required gems by running in theme's root directory:
+
+```sh
+bundle config --local set path 'vendor/bundle'
+bundle install
+```
 
 This theme is setup just like a normal Jekyll site! To test it, run `bundle exec jekyll serve` and open your browser at [http://localhost:4000](http://localhost:4000). This starts a Jekyll server using this theme.
 

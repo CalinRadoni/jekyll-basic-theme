@@ -1,12 +1,16 @@
 ---
 layout: post
+title: Jekyll installation
+excerpt_separator: <!--more-->
 ---
+
+Jekyll installation in Debian 10.<!--more--> Here follows the simple procedure used by me.
 
 {% comment %}
 This is just a useless comment.
 {% endcomment %}
 
-## Jekyll
+## Installation
 
 Jekyll was installed with:
 

@@ -8,7 +8,7 @@ This repository was built in a few steps outlined below.
 
 ### Initialization
 
-In an **empty** directory and run this script:
+In an **empty** directory run this script:
 
 ```sh
 #!/bin/bash
@@ -25,6 +25,8 @@ bundle exec jekyll new-theme $THEME_NAME
 mkdir -p $THEME_NAME/_posts
 ```
 
+The `jekyll-basic-theme` was taken and used as the theme home.
+
 ### gemspec
 
 Change *theme-name*`.gemspec` to add additional files and directories:
@@ -34,6 +36,8 @@ spec.files = `git ls-files -z`.split("\x0").select do |f|
     f.match(%r!^(assets|_(includes|layouts|posts|sass)/|(LICENSE|README|index|about|404)((\.(txt|md|html)|$)))!i)
 end
 ```
+
+and set to set only one dependency: `spec.add_runtime_dependency "github-pages"`
 
 ### Helper files
 
