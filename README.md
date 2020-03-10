@@ -7,7 +7,7 @@ This is a skeleton theme. It is meant to be used as a basis for other themes.
 
 ## Development and testing
 
-Download and install locally the required gems by running in theme's root directory:
+Download and install locally the required gems by executing in theme's root directory:
 
 ```sh
 bundle config --local set path 'vendor/bundle'
@@ -20,19 +20,18 @@ Add pages, documents, data, etc. like normal to test your theme's contents. As y
 
 When the theme is released, only the files in:
 
-* `_layouts`
 * `_includes`
-* `_sass`
+* `_layouts`
+* `_pages`
 * `_posts`
+* `_sass`
 * `assets`
 
 directories and these files from root directory:
 
-* `LICENSE.tx`
+* `LICENSE.txt`
 * `README.md`
 * `index.md`
-* `about.md`
-* `404.html`
 
 tracked with Git will be bundled.
 
