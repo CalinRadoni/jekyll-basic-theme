@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Theme parameters
+categories: [ "Configuration" ]
+tags: [ "jekyll-basic-theme" ]
 ---
 
 Short to none explanation of theme's parameters.
