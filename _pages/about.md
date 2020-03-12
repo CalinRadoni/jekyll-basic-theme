@@ -33,7 +33,7 @@ Change *theme-name*`.gemspec` to add additional files and directories:
 
 ```ruby
 spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r!^(assets|_(includes|layouts|posts|sass)/|(LICENSE|README|index|about|404)((\.(txt|md|html)|$)))!i)
+  f.match(%r!^(assets|_(includes|layouts|pages|posts|sass)/|(LICENSE|README|index)((\.(txt|md|html)|$)))!i)
 end
 ```
 
@@ -47,9 +47,18 @@ These `index.md`, `about.md` and `404.html` files are just for theme testing and
 
 Add and change the basic files
 
-* `default.html` - layouts are derived from this one
-* `page.html`
-* `post.html`
-* `home.html`
-* `_includes/footer.html`
-* `assets/css/style.scss`
+* `_includes/footer.html` - the footer for all pages and posts
+* `_layouts/default.html` - layouts are derived from this one
+* `_layouts/page.html` - layout for pages
+* `_layouts/post.html` - layout for posts
+* `_layouts/home.html` - layout for home page
+* `_layouts/categories.html` - layout for the `categories.html` page
+* `_layouts/tags.html` - layout for the `tags.html` page
+* `_pages/` - this contains some default pages
+* `_posts/` - test posts
+* `_sass/` - these define the CSS styles and are included by `assets/css/style.scss`
+* `assets/css/style.scss` - this will be compiled in `assets/css/style.css`
+* `_config.yml` - to define the options for site, theme and Jekyll
+
+**Note:** This theme builds the `README.md`. To be ignored by Jekyll add it to the `exclude` section
+    of the `_config.yml` file and remove the front matter (`---` at the top) from it.
