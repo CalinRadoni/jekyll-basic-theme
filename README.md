@@ -18,7 +18,7 @@ This theme is setup just like a normal Jekyll site! To test it, run `bundle exec
 
 Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-When the theme is released, only the files in:
+When the theme is released, only the files tracked with Git from:
 
 * `_includes`
 * `_layouts`
@@ -33,7 +33,7 @@ directories and these files from root directory:
 * `README.md`
 * `index.md`
 
-tracked with Git will be bundled.
+will be bundled.
 
 To add a another directory to your theme-gem, please edit the regexp in `jekyll-basic-theme.gemspec` accordingly.
 
