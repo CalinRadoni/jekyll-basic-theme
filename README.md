@@ -3,6 +3,8 @@
 
 # jekyll-basic-theme
 
+[![Build Status](https://travis-ci.com/CalinRadoni/jekyll-basic-theme.svg?branch=master)](https://travis-ci.com/CalinRadoni/jekyll-basic-theme)
+
 This is a skeleton theme. It is meant to be used as a basis for other themes.
 
 ## Development and testing
