@@ -4,6 +4,7 @@ title: Jekyll installation
 excerpt_separator: <!--more-->
 categories: [ "System" ]
 tags: [ "Jekyll", "GitHub Pages" ]
+author: "Calin Radoni, Radoni Calin"
 ---
 
 Jekyll installation in Debian 10.<!--more--> Here follows the simple procedure used by me.
