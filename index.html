@@ -2,13 +2,13 @@
 layout: home
 ---
 
-# {{ site.title }}
+<h1>{{ site.title }}</h1>
+<h3>{{ site.description }}</h3>
 
-## {{ site.description }}
-
-Links:
-
-* [Categories]({% link _pages/categories.md %})
-* [Tags]({% link _pages/tags.md %})
-* [About]({% link _pages/about.md %})
-* [README]({% link README.md %})
+<h2>Links</h2>
+<ul>
+  <li><a href="{% link _pages/categories.md %}">Categories</a></li>
+  <li><a href="{% link _pages/tags.md %}">Tags</a></li>
+  <li><a href="{% link _pages/about.md %}">About</a></li>
+  <li><a href="{% link README.md %}">README</a></li>
+</ul>

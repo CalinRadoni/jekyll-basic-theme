@@ -10,6 +10,9 @@ url: "https://github.com/CalinRadoni/jekyll-basic-theme"
 github_username: CalinRadoni
 copyright: 2020
 
+# set the date format to ISO8601. See https://shopify.github.io/liquid/filters/date/ for other formats
+date-format: "%F"
+
 skin: light
 
 # Build settings
