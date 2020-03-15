@@ -2,6 +2,7 @@
 layout: page
 title: About
 description: About jekyll-basic-theme
+date: 2020-03-15
 permalink: /about/
 ---
 

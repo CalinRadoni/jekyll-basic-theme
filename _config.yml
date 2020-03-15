@@ -5,9 +5,7 @@
 title: "jekyll-basic-theme"
 tagline: "jekyll-basic-theme skeleton theme"
 description: "This is a skeleton theme. It is meant to be used as a basis for other themes."
-# logo: /assets/img/logo.png
-
-# the base hostname and protocol of the site
+logo: /assets/img/site-logo.png
 url: "https://calinradoni.github.io/"
 
 # ------------------------------------------------------------------------------
