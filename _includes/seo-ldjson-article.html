@@ -1,0 +1,19 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ page.url | absolute_url }}
+    },
+    "headline": "{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}",
+    {% if page.description %}"description": "{{ page.description }}",{% endif %}
+    {% if page.image %}"image": [ "{{ page.image | absolute_url }}" ],{% endif %}
+    "datePublished": {% if page.date %}{{ page.date }}{% else %}{{ site.date }}{% endif %},
+    {% if page.date-modified %}"dateModified": {{ page.date-modified }},{% endif %}
+    "author": {
+      "@type": "Person",
+      "name": "{% if page.author %}{{ page.author }}{% else %}{{ site.author-name }}{% endif %}"
+    }
+  }
+</script>

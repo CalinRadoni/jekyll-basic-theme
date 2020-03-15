@@ -30,23 +30,6 @@ social-links:
     link: https://www.linkedin.com/in/...
 
 # ------------------------------------------------------------------------------
-# SEO Plugin
-# ------------------------------------------------------------------------------
-
-# see https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-
-author: "Calin Radoni"
-
-# I have doubts that these work as they should !
-#social:
-#  name: "Calin Radoni"
-#  links:
-#    - https://github.com/CalinRadoni
-#    - https://www.linkedin.com/in/...
-
-# google_site_verification
-
-# ------------------------------------------------------------------------------
 # Jekyll settings
 # ------------------------------------------------------------------------------
 
@@ -69,5 +52,4 @@ include:
 # required plugins
 plugins:
   - jekyll-paginate
-  - jekyll-seo-tag
   - jekyll-sitemap

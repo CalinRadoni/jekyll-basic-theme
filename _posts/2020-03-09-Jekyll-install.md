@@ -1,6 +1,12 @@
 ---
 layout: post
 title: Jekyll installation
+# seo \
+headline: Jekyll install in Debian 10
+description: An easy way to install Jekyll in Debian 10
+# image:
+date-modified: 2020-03-15
+# seo /
 excerpt_separator: <!--more-->
 categories: [ "System" ]
 tags: [ "Jekyll", "GitHub Pages" ]
