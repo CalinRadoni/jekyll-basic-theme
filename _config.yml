@@ -1,26 +1,61 @@
+# ------------------------------------------------------------------------------
 # Site settings
-title: jekyll-basic-theme test pages
+# ------------------------------------------------------------------------------
+
+title: "jekyll-basic-theme"
+tagline: "jekyll-basic-theme skeleton theme"
 description: "This is a skeleton theme. It is meant to be used as a basis for other themes."
-meta-description: "Calin Radoni's jekyll-basic-theme for GitHub Pages"
-meta-keywords: "Jekyll, Jekyll theme, GutHub Pages, Calin Radoni"
+# logo: /assets/img/logo.png
 
 # the base hostname and protocol of the site
 url: "https://calinradoni.github.io/"
 
-author:
-  name: Calin Radoni
-  email: CalinRadoni@users.noreply.github.com
-  copyright-text: 2020
+# ------------------------------------------------------------------------------
+# Theme settings
+# ------------------------------------------------------------------------------
+
+author-name: "Calin Radoni"
+author-email: CalinRadoni@users.noreply.github.com
+copyright-text: "2020"
 
 # set the date format to ISO8601. See https://shopify.github.io/liquid/filters/date/ for other formats
 date-format: "%F"
 
 skin: light
 
-# Build settings
+social-links:
+  - site: GitHub
+    link: https://github.com/CalinRadoni
+  - site: LinkedIn
+    link: https://www.linkedin.com/in/...
+
+# ------------------------------------------------------------------------------
+# SEO Plugin
+# ------------------------------------------------------------------------------
+
+# see https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+
+author: "Calin Radoni"
+
+# I have doubts that these work as they should !
+#social:
+#  name: "Calin Radoni"
+#  links:
+#    - https://github.com/CalinRadoni
+#    - https://www.linkedin.com/in/...
+
+# google_site_verification
+
+# ------------------------------------------------------------------------------
+# Jekyll settings
+# ------------------------------------------------------------------------------
+
 markdown: kramdown
 
-# Exclusions ...
+# change the permalink format
+permalink: /pages/:short_year:month:day-:slug:output_ext
+
+# exclusions ...
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -31,8 +66,8 @@ exclude:
 include:
   - _pages
 
-# Change default permalink format
-permalink: /pages/:short_year:month:day-:slug:output_ext
-
+# required plugins
 plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap

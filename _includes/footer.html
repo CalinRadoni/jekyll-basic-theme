@@ -1,23 +1,27 @@
 <hr/>
 <footer>
   <div>
-    <p>@
-    {% if page.date %}
+    <p>@&nbsp;
+    {%- if page.date -%}
       {{ page.date | date: "%Y" }}
-    {% else %}
-      {% if site.author.copyright-text %}
-        {{ site.author.copyright-text }}
-      {% endif %}
-    {% endif %}
-    {% if page.author %}
+    {%- else -%}
+      {%- if site.copyright-text -%} {{ site.copyright-text }} {%- endif -%}
+    {%- endif -%}
+    &nbsp;
+    {%- if page.author -%}
       {{ page.author }}
-    {% else %}
-      {% if site.author.email %}
-        <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a>
-      {% else %}
-        {{ site.author.name }}
-      {% endif %}
-    {% endif %}
+    {%- else -%}
+      {%- if site.author-email -%}
+        <a href="mailto:{{ site.author-email }}">{{ site.author-name }}</a>
+      {%- else -%}
+        {{ site.author-name }}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- for item in site.social-links -%}
+      {%- if forloop.first == true -%}&nbsp;-&nbsp;{%- else -%}&nbsp;{%- endif -%}
+      <a rel="author" href="{{ item.link | cgi_escape | escape}}">{{ item.site | escape }}</a>
+    {%- endfor -%}
     </p>
     <p>The theme is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
   </div>
