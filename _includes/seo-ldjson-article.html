@@ -8,7 +8,7 @@
   },
   "headline": "{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}",
   {% if page.description %}"description": "{{ page.description }}",{% endif %}
-  "image": [ {% if page.image %}"{{ page.image | absolute_url }}"{% else %}"{{ "/assets/img/default-article.png" | absolute_url }}"{% endif %} ],
+  "image": [ {% if page.image %}"{{ page.image }}"{% else %}"{{ "/assets/img/default-article.png" }}"{% endif %} ],
   {% if page.date %}"datePublished": "{{ page.date }}",{% endif %}
   {% if page.date-modified %}"dateModified": "{{ page.date-modified | date: %F}}",{% endif %}
   "author": {
@@ -20,7 +20,7 @@
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.logo | absolute_url }}"
+      "url": "{{ site.logo }}"
     }
   }
 }
