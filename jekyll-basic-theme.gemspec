@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
     spec.name          = "jekyll-basic-theme"
-    spec.version       = "0.7.0"
+    spec.version       = "0.8.0"
     spec.authors       = ["Calin Radoni"]
     spec.email         = ["CalinRadoni@users.noreply.github.com"]
 
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
     # and were valid for github-pages version 204
     spec.add_runtime_dependency "jekyll", ">= 3.8", "< 5.0"
     spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
+    spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
     spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.6"
 
     spec.add_development_dependency "bundler"

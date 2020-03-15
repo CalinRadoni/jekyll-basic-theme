@@ -4,12 +4,13 @@ description: "This is a skeleton theme. It is meant to be used as a basis for ot
 meta-description: "Calin Radoni's jekyll-basic-theme for GitHub Pages"
 meta-keywords: "Jekyll, Jekyll theme, GutHub Pages, Calin Radoni"
 
+# the base hostname and protocol of the site
+url: "https://calinradoni.github.io/"
+
 author:
   name: Calin Radoni
   email: CalinRadoni@users.noreply.github.com
   copyright-text: 2020
-url: "https://github.com/CalinRadoni/jekyll-basic-theme"
-github_username: CalinRadoni
 
 # set the date format to ISO8601. See https://shopify.github.io/liquid/filters/date/ for other formats
 date-format: "%F"
@@ -32,3 +33,6 @@ include:
 
 # Change default permalink format
 permalink: /pages/:short_year:month:day-:slug:output_ext
+
+plugins:
+  - jekyll-sitemap
