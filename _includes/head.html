@@ -1,15 +1,32 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
-<title>{%- if page.title -%}{{ page.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
-<meta name="author"             content="{% if page.author %}{{ page.author }}{% else %}{{ site.author-name }}{% endif %}" />
-<meta name="description"        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-<link rel="canonical"           href="{{ page.url | absolute_url }}" />
+{% if page.title %}
+  {%- assign xTitle = page.title -%}
+{%- else -%}
+  {%- assign xTitle = site.title -%}
+{%- endif -%}
+{%- if page.author -%}
+  {%- assign xAuthor = page.author -%}
+{%- else -%}
+  {%- assign xAuthor = site.author-name -%}
+{%- endif -%}
+{%- if page.description -%}
+  {%- assign xDescription = page.description -%}
+{%- else -%}
+  {%- assign xDescription = site.description -%}
+{%- endif -%}
 
-<meta property="og:title"       content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-<meta property="og:locale"      content="en_US" />
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-<meta property="og:url"         content="{{ page.url | absolute_url }}" />
-<meta property="og:site_name"   content="{{ site.title }}" />
+<title>{{ xTitle }}</title>
+{% if xAuthor %}<meta name="author" content="{{ xAuthor }}" />{% endif %}
+{% if xDescription %}<meta name="description" content="{{ xDescription }}" />{% endif %}
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+<meta property="og:locale" content="en_US" />
+{% if xTitle %}<meta property="og:title" content="{{ xTitle }}" />{% endif %}
+{% if xDescription %}<meta property="og:description" content="{{ xDescription }}" />{% endif %}
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
