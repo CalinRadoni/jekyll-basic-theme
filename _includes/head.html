@@ -2,12 +2,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% if page.title %}
-  {%- assign xTitle = page.title -%}
-{%- else -%}
-  {%- assign xTitle = site.title -%}
-{%- endif -%}
-{%- if page.author -%}
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+{% if page.author %}
   {%- assign xAuthor = page.author -%}
 {%- else -%}
   {%- assign xAuthor = site.author-name -%}
@@ -18,15 +16,6 @@
   {%- assign xDescription = site.description -%}
 {%- endif -%}
 
-<title>{{ xTitle }}</title>
 {% if xAuthor %}<meta name="author" content="{{ xAuthor }}" />{% endif %}
 {% if xDescription %}<meta name="description" content="{{ xDescription }}" />{% endif %}
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
-
-<meta property="og:locale" content="en_US" />
-{% if xTitle %}<meta property="og:title" content="{{ xTitle }}" />{% endif %}
-{% if xDescription %}<meta property="og:description" content="{{ xDescription }}" />{% endif %}
-<meta property="og:url" content="{{ page.url | absolute_url }}" />
-<meta property="og:site_name" content="{{ site.title }}" />
-
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
