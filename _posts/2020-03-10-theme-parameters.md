@@ -1,23 +1,68 @@
 ---
 layout: post
-title: Theme parameters
+title: "Theme parameters"
+description: "The parameters used by this theme"
+date-modified: 2020-03-17
 categories: [ "Configuration" ]
 tags: [ "jekyll-basic-theme" ]
 ---
 
 Short to none explanation of theme's parameters.
 
-## The parameters
+## Parameters SEO JSON-LD for posts and articles
 
-* title: jekyll-basic-theme test pages
+* "headline": page.headline **or** page.title
+* "description": page.description **or** *excluded*
+* "image": page.image **or** "/assets/img/default-article.png"
+* "datePublished": page.date **or** *the-date-from-post-name* **or** *excluded*
+* "dateModified": page.date-modified **or** *excluded*
+* "author": page.author **or** site.author-name
+* "publisher.name": site.title
+* "publisher.logo.url": site.logo
+
+## Parameters used in header
+
+* title: page.title **or** site.title
+* meta name="author": page.author **or** site.author-name
+* meta name="description": page.description **or** site.description
+
+* meta property="og:title": page.title **or** site.title
+* meta property="og:description": page.description **or** site.description
+
+## Parameters used in footer
+
+* page.date **or** site.copyright-text **or** *nothing*
+* page.author **or** `[site.author-name](site.author-email)` **or** site.author-name
+* social-links **or** *nothing*
+
+## Parameters defined in _config.yml
+
+### Site parameters
+
+* title: "jekyll-basic-theme"
+* tagline: "jekyll-basic-theme skeleton theme"
 * description: "This is a skeleton theme. It is meant to be used as a basis for other themes."
-* meta-description: "Calin Radoni's jekyll-basic-theme for GitHub Pages"
-* meta-keywords: "Jekyll, Jekyll theme, GutHub Pages, Calin Radoni"
+* logo: "/assets/img/site-logo.png"
+* url: "https://calinradoni.github.io/"
 
-* author: Calin Radoni
-* email: CalinRadoni@users.noreply.github.com
-* url: "https://github.com/CalinRadoni/jekyll-basic-theme"
-* github_username: CalinRadoni
-* copyright: 2020
+### Theme parameters
 
+* author-name: "Calin Radoni"
+* author-email: CalinRadoni@users.noreply.github.com
+* copyright-text: "2020"
+* date-format: "%F"
 * skin: light
+* social-links:
+
+## Parameters defined in posts
+
+* layout: post
+* title: "Jekyll installation"
+* headline: "Jekyll install in Debian 10"
+* description: "An easy way to install Jekyll in Debian 10"
+* image: "/assets/img/post-image.png"
+* author: "Calin Radoni"
+* date-modified: 2020-03-15
+* excerpt_separator: `<!--more-->`
+* categories: [ "System" ]
+* tags: [ "Jekyll", "GitHub Pages" ]
