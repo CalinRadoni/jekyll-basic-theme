@@ -7,6 +7,15 @@
 
 This is a skeleton theme. It is meant to be used as a basis for other themes.
 
+It contains JSON-LD SEO for Google Search (see [Intro to structured data](https://developers.google.com/search/docs/guides/intro-structured-data)) and [Open Graph](https://ogp.me/) metadata.
+
+**On purpose**, this theme does **not** have CSS / SCSS detailed styles, only some basic, example, files.
+
+Useful links:
+
+* [Jekyll Themes](https://jekyllrb.com/docs/themes/)
+* Liquid templating language on [Jekyll](https://jekyllrb.com/docs/liquid/) and [shopify](https://shopify.github.io/liquid/)
+
 ## Development and testing
 
 Download and install locally the required gems by executing in theme's root directory:
@@ -33,11 +42,11 @@ directories and these files from root directory:
 
 * `LICENSE.txt`
 * `README.md`
-* `index.md`
+* `index.html`
 
 will be bundled.
 
-To add a another directory to your theme-gem, please edit the regexp in `jekyll-basic-theme.gemspec` accordingly.
+To add a another file or directory to your theme gem, edit the regexp in `jekyll-basic-theme.gemspec` accordingly.
 
 ## License
 

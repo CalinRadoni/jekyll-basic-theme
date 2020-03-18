@@ -2,7 +2,7 @@
 layout: post
 title: "Theme parameters"
 description: "The parameters used by this theme"
-date-modified: 2020-03-17
+date-modified: 2020-03-18
 categories: [ "Configuration" ]
 tags: [ "jekyll-basic-theme" ]
 ---
@@ -22,12 +22,28 @@ Short to none explanation of theme's parameters.
 
 ## Parameters used in header
 
-* title: page.title **or** site.title
+* "title": page.title **or** site.title
 * meta name="author": page.author **or** site.author-name
 * meta name="description": page.description **or** site.description
 
+### Open Graph parameters - pages
+
 * meta property="og:title": page.title **or** site.title
-* meta property="og:description": page.description **or** site.description
+* meta property="og:image": page.image **or** `/assets/img/default-article.png`
+* meta property="og:description": page.description **or** *excluded*
+* meta property="og:site_name": site.title
+
+### Open Graph parameters - posts
+
+* meta property="og:title": page.title **or** site.title
+* meta property="og:image": page.image **or** `/assets/img/default-article.png`
+* meta property="og:description": page.description **or** *excluded*
+* meta property="og:site_name": site.title
+
+* meta property="article:published_time": page.date **or** *excluded*
+* meta property="article:modified_time": page.date-modified **or** *excluded*
+* meta property="article:tag": page.tags **or** *excluded*
+* meta property="profile:username": page.author **or** site.author-name
 
 ## Parameters used in footer
 

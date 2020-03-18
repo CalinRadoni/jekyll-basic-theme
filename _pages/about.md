@@ -8,7 +8,7 @@ permalink: /about/
 
 This repository was built in a few steps outlined below.
 
-### Initialization
+### Theme creation
 
 In an **empty** directory run this script:
 
@@ -27,7 +27,7 @@ bundle exec jekyll new-theme $THEME_NAME
 mkdir -p $THEME_NAME/_posts
 ```
 
-The `jekyll-basic-theme` was taken and used as the theme home.
+The `jekyll-basic-theme` directory was taken and used as the theme home.
 
 ### gemspec
 
@@ -39,28 +39,15 @@ spec.files = `git ls-files -z`.split("\x0").select do |f|
 end
 ```
 
-and set to set only one dependency: `spec.add_runtime_dependency "github-pages"`
+and set runtime and development dependencies.
 
 ### Helper files
 
-These `index.md`, `about.md` and `404.html` files are just for theme testing and basic developing.
+* `index.html`, `about.md` and `404.md` are example files for theme testing and development
+* `tags.md` and `categories.md` are example files
+* the files in `_sass` directory should define the style. Those should remain almost empty in this theme
+* the files in `_posts` directory are for theme testing and development
+* the images from `assets` directory are for theme testing and development
 
-### Basic files
-
-Add and change the basic files
-
-* `_includes/footer.html` - the footer for all pages and posts
-* `_layouts/default.html` - layouts are derived from this one
-* `_layouts/page.html` - layout for pages
-* `_layouts/post.html` - layout for posts
-* `_layouts/home.html` - layout for home page
-* `_layouts/categories.html` - layout for the `categories.html` page
-* `_layouts/tags.html` - layout for the `tags.html` page
-* `_pages/` - this contains some default pages
-* `_posts/` - test posts
-* `_sass/` - these define the CSS styles and are included by `assets/css/style.scss`
-* `assets/css/style.scss` - this will be compiled in `assets/css/style.css`
-* `_config.yml` - to define the options for site, theme and Jekyll
-
-**Note:** This theme builds the `README.md`. To be ignored by Jekyll add it to the `exclude` section
+**Note:** This theme builds the `README.md` file. To be ignored by Jekyll add it to the `exclude` section
     of the `_config.yml` file and remove the front matter (`---` at the top) from it.
