@@ -16,9 +16,9 @@
 {% if page.date %}<meta property="article:published_time" content="{{ page.date }}" />{% endif %}
 {% if page.date-modified %}<meta property="article:modified_time" content="{{ page.date-modified | date: %F}}" />{% endif %}
 
-{%- assign item_list = site.tags | sort -%}
+{%- assign item_list = page.tags | sort -%}
 {% for item in item_list %}
-<meta property="article:tag" content="{{ item[0] }}" />
+<meta property="article:tag" content="{{ item }}" />
 {%- endfor -%}
 
 {% comment %}The author is added as a person in this page{% endcomment %}
